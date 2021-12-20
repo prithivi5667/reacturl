@@ -10,7 +10,7 @@ import Avatar from "@material-ui/core/Avatar";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-import logo from './images/profile.jpeg';
+import logo from './images/profile.jpg';
 import twitter from './images/twitter.svg';
 import heart from './images/heart-emoji.png';
 import backgroundImage from './images/background.jpg';
