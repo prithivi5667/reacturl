@@ -25,6 +25,7 @@ import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 import Link from '@material-ui/core/Link';
 import OpenInNewIcon from '@material-ui/icons/OpenInNew';
+import { axiosInstance } from "./config";
 
 const BootstrapInput = withStyles(theme => ({
   root: {
@@ -161,7 +162,7 @@ export default function App() {
       console.log('getInitialTop5');
 
       try {
-        const response = await axios.get('/api/shrink');
+        const response = await axiosInstance.get('/api/shrink');
         const top5 = response.data.top5;
         console.log(top5);
         setTop5(top5);
@@ -183,7 +184,7 @@ export default function App() {
     setShrinking(true);
     const post = async () => {
       try {
-        const result = await axios.post('/api/shrink',
+        const result = await axiosInstance.post('/api/shrink',
           {url});
         console.log(result);
 
